@@ -65,5 +65,6 @@ Thumbs.db
 myapp
 pocketbase
 
-pb_data/
-pb_data/*
+/pb_data/
+/pb_data/*
+pb_data/data.db
