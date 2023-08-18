@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "1e50c217-5e0d-4e43-9914-ed0bba3ef105",
+		"name": "pocket-chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "547614"
+	},
+	"item": [
+		{
+			"name": "0. Auth",
+			"request": {
+				"auth": {
+					"type": "basic"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identity\": \"tiagomourabrandao@gmail.com\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/admins/auth-with-password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"admins",
+						"auth-with-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/collections/chat/records",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"chat",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chats Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"xxx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/collections/chat/records/t90nbsazbatyp6a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"chat",
+						"records",
+						"t90nbsazbatyp6a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chats Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"xxx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/collections/chat/records/t90nbsazbatyp6a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"chat",
+						"records",
+						"t90nbsazbatyp6a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"xxx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/collections/chat/records/t90nbsazbatyp6a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"chat",
+						"records",
+						"t90nbsazbatyp6a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
